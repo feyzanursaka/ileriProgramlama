@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Add Course </title>
+    <style>
+}
+ 
+p3 {
+
+font-size: 20pt;
+font-weight: bold;
+    } 
+p {
+font-size: 12pt;
+font-weight: bold;
+    }
+
+  p1 {
+    float: left;
+    width: 15%;
+    font-size: 12pt;
+    font-weight: bold;
+    }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;      }
+
+   </style>
+</head>
+
+<script>
+"use strict";
+
+function maxA() {
+out6.innerText="Name" 
+out7.innerText="Max"
+
+   let temp=0;
+   let sayac=0;
+for(let i=0; i<dersler.length; i++){
+if(temp<((midterm[i]*0.4)+(final[i]*0.6))){
+sayac=i
+temp=((midterm[i]*0.4)+(final[i]*0.6))
+}
+}
+
+out6.innerText+="\n"+ dersler[sayac]
+out7.innerText+="\n"+ ((midterm[sayac]*0.4)+(final[sayac]*0.6))
+
+
+
+}
+function average() {
+
+let tempa=0;
+out4.innerText="Name"
+out5.innerText="Average"
+for(let i=0; i<dersler.length; i++){
+
+out4.innerText+="\n"+ dersler[i]
+tempa=(midterm[i]*0.4)+(final[i]*0.6)
+out5.innerText +="\n"+ tempa
+}
+}
+function print() {
+	t1.innerText="out of Print "
+	t2.innerText="out of Avg"
+	t3.innerText="out of Max"
+
+}
+function add() {
+
+dersler.push(n.value)
+midterm.push(m.value)
+final.push(f.value)
+
+
+out1.innerText+="\n"+ n.value
+out2.innerText +="\n"+ m.value
+out3.innerText +="\n"+ f.value
+
+
+}
+
+
+
+
+
+
+</script>
+
+<body>
+<h2 id=title></h2>
+
+<p id=outA></p>
+<p>
+Name    <input type=text id=n style="width:99px">
+</p> 
+<p>
+Midterm <input type=number   id=m style="width:99px"> 
+</p>
+<p>
+Final   <input type=number   id=f style="width:99px"> 
+</p>
+
+<p>
+<input type=button value="Add"  onClick="add()">
+<br>
+
+
+<input type=button value="Print"  onClick="print()">
+<input type=button value="Avg"  onClick="average()">
+<input type=button value="Max"   onClick="maxA()">
+</p>
+<hr>
+
+
+<div class="row">
+  <p1 id="out1">Name     
+<br>
+  </p1>
+  <p1 id="out2">Midterm  
+<br>
+  </p1>
+  <p1 id="out3">Final  
+<br>
+  </p1>
+</div>
+
+
+
+<p3 align="right" id="t1">   
+<br>
+  </p3>
+
+
+<hr >
+
+<div class="row">
+  <p1 id="out4">Name     
+<br>
+  </p1>
+  <p1 id="out5">Average 
+<br>
+   </p1>
+
+</div>
+
+
+<p3 align="right" id="t2">   
+<br>
+  </p3>
+
+
+
+<hr >
+
+<div class="row">
+  <p1 id="out6">Name     
+<br>
+  </p1>
+  <p1 id="out7">Max 
+<br>
+   </p1>
+
+</div>
+
+<p3 align="right" id="t3">   
+<br>
+  </p3>
+
+<hr >
+<br >
+<p >  This page created by Ayse Sena Feyiz 
+<br>
+  </p>
+
+
+<script>
+title.innerText = document.title;
+const dersler=[];
+const midterm=[];
+const final=[];
+   
+</script>
+
+
+
+
+
+</body>
+</html>
