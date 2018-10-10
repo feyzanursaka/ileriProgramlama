@@ -1,7 +1,5 @@
-﻿Advanced Programming Techniques
+ileriProgramlama
 
-[Repository](https://github.com/AyseSenaFeyiz/ileriProgramlama): weekly work & term project
-
-[Class Work 2](https://aysesenafeyiz.github.io/ileriProgramlama/)
+BLM 305 dersinin ödevleri
 
 
