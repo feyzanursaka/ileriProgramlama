@@ -6,7 +6,10 @@
 	    <link href="https://maeyler.github.io/JS/sss/inspector.css" 
 	          rel="stylesheet" media="all">
 	    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
-	    
+	    <script src="c4_data.js"></script>
+	    <script src="c6_object.js"></script>
+	    <script src="../exam/Quiz.js"></script>
+	    <script src="async.js"></script>
 	    <script src="Database.js"></script>
 	    <title>Eloquent JavaScript </title>
 	</head>
@@ -16,7 +19,7 @@
 	<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
 	<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
 	</p>
-	
+		
 	<script>
 	"use strict";
 	var a, b, c, code;  //global variables
@@ -42,7 +45,6 @@ display(new CW4());
 	        reportError(e);
 	    }
 
-
 class Point {
   constructor(x, y) {
     this.x = x; 
@@ -62,7 +64,6 @@ this.y=y;
 
   }
 }
-
 class Distance {
 	  constructor(km =0) {
 	    this.km = Math.round(km);
@@ -86,12 +87,12 @@ class Distance {
 class CW4 extends Menu {
 	  constructor() {
 	    super();
+
 this.point=new Point(3,5);
 this.point3D=new Point(1,2,3);
-this.km = new Distance(100);
+	this.km = new Distance(100);
 	  }
 	  }
-
 	</script>
 	
 	<p><input type=file multiple onChange='fileSelect(this)' />
@@ -100,11 +101,12 @@ this.km = new Distance(100);
 
 <a href="https://github.com/AyseSenaFeyiz/ileriProgramlama">Repository</a> &emsp;
 	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/CW2">CW2</a> &emsp;
-	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/HW1">HW1</a>
-<a href= "https://aysesenafeyiz.github.io/ileriProgramlama/inspector.html">CW2</a>
+	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/HW1">HW1</a> &emsp;
+<a href= "https://aysesenafeyiz.github.io/ileriProgramlama/inspector.html">CW3</a>
 	<pre id=disp1></pre>
 	<img id=disp2 />
 	
 	</body>
 	</html>
+
 
