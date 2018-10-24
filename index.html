@@ -10,6 +10,7 @@
 	    <script src="c6_object.js"></script>
 	    <script src="../exam/Quiz.js"></script>
 	    <script src="async.js"></script>
+	    <script src="Database.js"></script>
 	    <title>Eloquent JavaScript </title>
 	</head>
 	
@@ -33,6 +34,7 @@
 	    display(new Quiz());
 	    display(new Chap6()); 
 	    display(new Chap4()); 
+display(new CW4());
 	    display(MENU);
 	}
 	    docName.innerText = "Inspector "+VERSION;
@@ -42,6 +44,57 @@
 	    } catch(e) {
 	        reportError(e);
 	    }
+
+
+class Point {
+  constructor(x, y) {
+    this.x = x; 
+    this.y = y;
+  }
+  toString() {
+    return “ x = ”+ this.x+ “ y = ”+this.y; 
+  }
+}
+Point3D extends Point {
+constructor(x, y,z) {
+super(x,y);
+this.y=y;
+  }
+  toString() {
+        return “ x = ”+ this.x+ “ y = ”+this.y + “ z = ”+this.z;
+
+  }
+}
+
+class Distance {
+	  constructor(km =0) {
+	    this.km = Math.round(km);
+	  }
+	  get miles() {
+	    return Math.round(this.km /1000);
+	  }
+	  set miles(value) {
+	    this.km =Math.round(value*1000);
+	  }
+	  toString() {
+	    return this.km +"km"
+	  }
+	  static fromMiles (value) {
+	    let t = new Distance ();
+	    t.miles = value;
+	    return t;
+	  }
+	}
+
+class CW4 extends Menu {
+	  constructor() {
+	    super();
+this.point=new Point(3,5);
+this.point3D=new Point(1,2,3);
+this.km = new Distance(100);
+	  }
+	  }
+
 	</script>
 	
 	<p><input type=file multiple onChange='fileSelect(this)' />
@@ -50,10 +103,11 @@
 
 <a href="https://github.com/AyseSenaFeyiz/ileriProgramlama">Repository</a> &emsp;
 	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/CW2">CW2</a> &emsp;
-	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/HW1">HW1</a> &emsp;
-<a href= "https://aysesenafeyiz.github.io/ileriProgramlama/inspector.html">CW3</a>
+	<a href="https://aysesenafeyiz.github.io/ileriProgramlama/HW1">HW1</a>
+<a href= "https://aysesenafeyiz.github.io/ileriProgramlama/inspector.html">CW2</a>
 	<pre id=disp1></pre>
 	<img id=disp2 />
 	
 	</body>
 	</html>
+
